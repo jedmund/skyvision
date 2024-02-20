@@ -13,5 +13,6 @@ struct SkyVisionApp: App {
         WindowGroup {
             ContentView()
         }
+        .defaultSize(CGSize(width: 480, height: 900))
     }
 }

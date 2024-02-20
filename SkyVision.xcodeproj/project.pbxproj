@@ -12,6 +12,9 @@
 		D03DF3762B83BDA800C6DB8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03DF3752B83BDA800C6DB8D /* ContentView.swift */; };
 		D03DF3782B83BDA900C6DB8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03DF3772B83BDA900C6DB8D /* Assets.xcassets */; };
 		D03DF37B2B83BDA900C6DB8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03DF37A2B83BDA900C6DB8D /* Preview Assets.xcassets */; };
+		D083773E2B841C050093A57B /* WKView in Frameworks */ = {isa = PBXBuildFile; productRef = D083773D2B841C050093A57B /* WKView */; };
+		D08377402B841F1F0093A57B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D083773F2B841F1F0093A57B /* WebView.swift */; };
+		D08377422B841F4B0093A57B /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08377412B841F4B0093A57B /* WebViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		D03DF3772B83BDA900C6DB8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D03DF37A2B83BDA900C6DB8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D03DF37C2B83BDA900C6DB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D083773F2B841F1F0093A57B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		D08377412B841F4B0093A57B /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
+		D08377432B845C670093A57B /* SkyVision.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SkyVision.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +36,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D03DF3722B83BDA800C6DB8D /* RealityKitContent in Frameworks */,
+				D083773E2B841C050093A57B /* WKView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,8 +63,11 @@
 		D03DF36E2B83BDA800C6DB8D /* SkyVision */ = {
 			isa = PBXGroup;
 			children = (
+				D08377432B845C670093A57B /* SkyVision.entitlements */,
 				D03DF3732B83BDA800C6DB8D /* SkyVisionApp.swift */,
 				D03DF3752B83BDA800C6DB8D /* ContentView.swift */,
+				D083773F2B841F1F0093A57B /* WebView.swift */,
+				D08377412B841F4B0093A57B /* WebViewModel.swift */,
 				D03DF3772B83BDA900C6DB8D /* Assets.xcassets */,
 				D03DF37C2B83BDA900C6DB8D /* Info.plist */,
 				D03DF3792B83BDA900C6DB8D /* Preview Content */,
@@ -99,6 +109,7 @@
 			name = SkyVision;
 			packageProductDependencies = (
 				D03DF3712B83BDA800C6DB8D /* RealityKitContent */,
+				D083773D2B841C050093A57B /* WKView */,
 			);
 			productName = SkyVision;
 			productReference = D03DF36C2B83BDA800C6DB8D /* SkyVision.app */;
@@ -128,6 +139,9 @@
 				Base,
 			);
 			mainGroup = D03DF3632B83BDA800C6DB8D;
+			packageReferences = (
+				D083773C2B841C050093A57B /* XCRemoteSwiftPackageReference "WKView" */,
+			);
 			productRefGroup = D03DF36D2B83BDA800C6DB8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,6 +168,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D08377402B841F1F0093A57B /* WebView.swift in Sources */,
+				D08377422B841F4B0093A57B /* WebViewModel.swift in Sources */,
 				D03DF3762B83BDA800C6DB8D /* ContentView.swift in Sources */,
 				D03DF3742B83BDA800C6DB8D /* SkyVisionApp.swift in Sources */,
 			);
@@ -286,6 +302,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SkyVision/SkyVision.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SkyVision/Preview Content\"";
@@ -312,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SkyVision/SkyVision.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SkyVision/Preview Content\"";
@@ -356,10 +374,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		D083773C2B841C050093A57B /* XCRemoteSwiftPackageReference "WKView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rebeloper/WKView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		D03DF3712B83BDA800C6DB8D /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
+		};
+		D083773D2B841C050093A57B /* WKView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D083773C2B841C050093A57B /* XCRemoteSwiftPackageReference "WKView" */;
+			productName = WKView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
